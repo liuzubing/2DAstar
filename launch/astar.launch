@@ -1,0 +1,8 @@
+<launch>
+  <node pkg="astar" type="astar_node" name="astar_node" output="screen" />
+  <node name="InitToMovestartMsg_node" pkg="planner_test_pkg" type="InitToMovestartMsg_node" />
+  <node pkg="map_server" type="map_server" name="test_map_server" args="$(find testpackage)/maps/map1.yaml" />
+  <node name="rviz" pkg="rviz" type="rviz" args="astar.rviz"/>
+  <!-- <node name="rviz" pkg="rviz" type="rviz" args="-d $(find urdf_tutorial)/urdf.rviz"/> -->
+
+</launch>
